@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 
 # Create your views here.
 def home(request):
-    return render(request, "home.html")
+    return render(request, "blog/home.html")
 
 def post_list(request):
     #GET request checks if there is any additional queries in the string.
