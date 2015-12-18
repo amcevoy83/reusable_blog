@@ -15,11 +15,11 @@ Quick start
 
 2. Include the polls URLconf in your project urls. py like this::
 	
-	url(r' ^blogs/' , include(' reusable_blog. urls' )),
+	url(r'^blogs/', include('reusable_blog.urls' )),
 
 3. Run ` python manage.py migrate` to create the polls models.
 
 4. Add the blogs css::
 	<link rel="stylesheet" href="{% static "css/blog.css" %}">
 
-5. Visit http://127.0.0.1:8000/blogs/ to view the blogs you create.
+5. Visit http://127.0.0.1:8000/blogs/ to view the blogs you create.Re
