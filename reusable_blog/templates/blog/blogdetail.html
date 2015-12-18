@@ -1,0 +1,22 @@
+{%  extends "base.html" %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-xs-9">
+                {%  if post.image %}
+                <img src="/media/{{ post.image }}">
+                {% endif %}
+
+            <h3><a href="">{{ post.post_title }}</a></h3>
+
+            <p>{{  post.published_date }} <br>{{ post.content|linebreaks }}</p>
+
+            <button class="btn btn-default" onclick="location.href='/blog/'">Back to Blog</button>
+
+            {%  load disqus_tags %}
+            {%  set_disqus_title post.post_title %}
+            {%  disqus_show_comments %}
+             </div>
+        </div>
+
+{% endblock content %}
